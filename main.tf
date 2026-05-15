@@ -69,8 +69,8 @@ resource "aws_instance" "web_ap_south_1" {
 
   user_data = <<-EOF
               #!/bin/bash
-              sudo apt-get update -y
-              sudo apt-get install nginx -y
+              sudo yum update -y
+              sudo yum install nginx -y
               sudo systemctl start nginx
               sudo systemctl enable nginx
               EOF
@@ -89,8 +89,8 @@ resource "aws_instance" "web_ap_south_2" {
 
   user_data = <<-EOF
               #!/bin/bash
-              sudo apt-get update -y
-              sudo apt-get install nginx -y
+              sudo yum update -y
+              sudo yum install nginx -y
               sudo systemctl start nginx
               sudo systemctl enable nginx
               EOF
